@@ -1,0 +1,25 @@
+<header class="site--header">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-7">
+        <a href="#/">
+          <img src="images/bookmark.png" title="Front End Bookmarks" />
+          <h1>Front End Bookmarks</h1>
+          <p>A centralized location for all my bookmarks.</p>
+        </a>
+      </div>
+
+      <div class="col-md-5 admin" ng-controller="PathCtrl" ng-show="signedIn()">
+        <ul class="nav nav-pills">
+          <li><a href="#/">Home</a></li>
+          <li ng-class="{'active':getClass('/add')}"><a href="#/add">Add Bookmark</a></li>
+          <li ng-class="{'active':getClass('/categories')}"><a href="#/categories">Catagories</a></li>
+          <li><a ng-href="#" ng-click="logout()">Log Out</a></li>
+          <li><a ng-href="#/users/{{ user.uid }}">Welcome {{ user.profile.username }}</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</header>

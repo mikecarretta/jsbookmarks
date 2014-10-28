@@ -1,0 +1,194 @@
+.site--header {
+  background-color: #353432;
+  border-bottom: 5px solid #2790B0;
+  padding: 40px 0 36px;
+}
+  .site--header img {
+    float: left;
+    padding: 0 20px 20px 0;
+  }
+  .site--header a h1 {
+    font-family: 'Merriweather', serif;
+    font-weight: 700;
+    color: #faf9f9;
+    margin: 0;
+  }
+    .site--header a:hover h1{
+      color: #abddec;
+      text-decoration: none;
+    }
+
+  .site--header a p {
+    color: #e1e0df;
+  }
+    .site--header a:hover p{
+      color: #abddec;
+      text-decoration: none;
+    }
+  .site--header a:hover {
+    color: #2790B0;
+    text-decoration: none;
+  }
+
+.page--header {
+  padding: 24px 0;
+  margin-bottom: 14px;
+  border-bottom: 2px solid #ccc;
+}
+  .page--header h2 {
+    font-family: 'Merriweather', serif;
+    font-weight: 400;
+    margin: 0;
+  }
+  .page--filter {
+
+  }
+
+.back-btn {
+  margin-bottom: 14px;
+}
+
+.category {
+
+}
+  .categories--list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+    .category--item {
+      box-sizing: border-box;
+      border-bottom: 5px solid #4E4D4A;
+      float: left;
+      width: 100%;
+      height: 250px;
+      overflow: hidden;
+      margin: .5%;
+      padding: 0;
+      background-color: #fff;
+      -moz-box-shadow: rgba(0,0,0,0.2) 0 1px 3px;
+        -webkit-box-shadow: rgba(0,0,0,0.2) 0 1px 3px;
+          box-shadow: rgba(0,0,0,0.2) 0 1px 3px;
+      -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+          border-radius: 5px;
+    }
+      .category--item a {
+        color: #333;
+      }
+        .category--item a:hover {
+          text-decoration: none;
+        }
+      .category--item h3 {
+        margin-top: 20px;
+        padding: 0 20px;
+      }
+      .category--item p {
+        padding: 0 20px;
+      }
+    .JavaScript,
+    .AngularJS {
+      border-color: #2790B0;
+    }
+    .HTML {
+      border-color: #2B4E72;
+    }
+    .CSS {
+      border-color: #CC883A;
+    }
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 480px) {
+  .category--item {
+    width: 49%;
+  }
+}
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .category--item {
+    width: 32.33%;
+  }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .category--item {
+    width: 24%;
+  }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .category--item {
+    width: 24%;
+  }
+}
+
+
+@media (min-width: 1200px) {
+  .bookmarks {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+  .bookmark--list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .bookmark--item {
+      box-sizing: border-box;
+      float: left;
+      width: 100%;
+      padding: 0;
+      border-bottom: 1px solid #eee;
+      background-color: #fff;
+      -moz-box-shadow: rgba(0,0,0,0.2) 0 1px 3px;
+        -webkit-box-shadow: rgba(0,0,0,0.2) 0 1px 3px;
+          box-shadow: rgba(0,0,0,0.2) 0 1px 3px;
+    }
+      .bookmark--item:first-child {
+        margin-top: 20px;
+        -moz-border-radius: 5px 5px 0 0;
+          -webkit-border-radius: 5px 5px 0 0;
+            border-radius: 5px 5px 0 0;
+      }
+      .bookmark--item:last-child {
+        border: none;
+        margin-bottom: 20px;
+        -moz-border-radius: 0 0 5px 5px;
+          -webkit-border-radius: 0 0 5px 5px;
+            border-radius: 0 0 5px 5px;
+      }
+      .bookmark--item a {
+        color: #333;
+      }
+        .bookmark--item a:hover {
+          background-color: #f9fafa;
+          text-decoration: none;
+        }
+      .bookmark--item h3 {
+        margin-top: 20px;
+        padding: 0 20px;
+      }
+      .bookmark--item p {
+        padding: 0 20px;
+      }
+
+
+.admin > .nav-pills {
+  color: #fff;
+}
+  .admin > .nav-pills > li > a {
+    color: #fff;
+  }
+    .admin > .nav-pills > li > a:hover {
+      background-color: #242422;
+    }
+  .nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus {
+    background-color: #242422;
+  }
+
+footer,
+.footer {
+  padding: 40px 0 36px;
+}

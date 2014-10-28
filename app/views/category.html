@@ -1,0 +1,29 @@
+<div class="row page--header {{ category.name }}">
+  <div class="col-sm-6 page--title">
+    <h2>{{ category.name }} Bookmarks</h2>
+  </div>
+  <div class="col-sm-6 page--filter">
+    <input ng-model="bookmarkFilter" type="text" id="filter" class="form-control" placeholder="Filter {{ category.name }} Bookmarks">
+  </div>
+</div>
+
+<div class="row back-btn">
+  <div class="col-sm-12">
+    <a ng-href="#/" class="btn btn-link btn-sm"><span class="glyphicon glyphicon-chevron-left"></span> Back to Categories</a>
+  </div>
+</div>
+
+<div class="row categories">
+  <div class="col-sm-12">
+    <ul class="categories--list">
+      <li ng-repeat="bookmark in bookmarks | orderBy:'name' | filter: bookmarkFilter" class="category--item">
+        <a href="{{bookmark.url}}" title="{{bookmark.name}}">
+          <h3>{{bookmark.name}}</h3>
+          <p class="small">{{bookmark.url | hostnameFromUrl}}</p>
+          <p>{{bookmark.description | characters: numChars: breakOnWord}}</p>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+</div>

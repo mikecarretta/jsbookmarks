@@ -1,0 +1,45 @@
+<h1>Add a Category</h1>
+
+<hr>
+
+<form class="form-horizontal">
+  <div class="form-group">
+    <label for="name" class="col-sm-2 control-label">Name</label>
+    <div class="col-sm-10">
+      <input ng-model="category.name" type="text" class="form-control" id="name" placeholder="Category Name">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="description" class="col-sm-2 control-label">Description</label>
+    <div class="col-sm-10">
+        <textarea class="form-control" ng-model="category.description" rows="3"></textarea>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" ng-hide="edit" ng-click="submitCategory()" class="btn btn-primary" >Add Category</button>
+      <button type="submit" ng-if="edit" ng-click="saveCategory()" class="btn btn-primary" >Edit Category</button>
+      <button ng-click="resetCategory()" class="btn btn-default">Reset</button>
+    </div>
+  </div>
+</form>
+
+<hr>
+
+<h3>Categories</h3>
+
+<input ng-model="categoryFilter" type="text" id="filter" class="form-control" placeholder="Filter the Categories">
+
+<table class="table table-striped">
+  <tbody>
+    <tr ng-repeat="category in categories | filter:categoryFilter">
+      <td width="8%">
+        <a ng-click="editCategory(category)"><span class="glyphicon glyphicon-pencil"></span></a>
+        <a ng-click="deleteCategory(category)"><span class="glyphicon glyphicon-remove danger"></span></a>
+      </td>
+      <td width="25%"><a ng-href="#/categories/{{ category.$id }}">{{ category.name }}</a></td>
+      <td>{{ category.description }}</td>
+    </tr>
+  </tbody>
+</table>

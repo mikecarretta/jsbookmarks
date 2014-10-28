@@ -1,0 +1,21 @@
+<div class="row page--header">
+  <div class="col-sm-6 page--title">
+    <h2>Categories</h2>
+  </div>
+  <div class="col-sm-6 page--filter">
+    <input ng-model="categoryFilter" type="text" id="filter" class="form-control" placeholder="Filter the Categories">
+  </div>
+</div>
+
+<div class="row categories">
+  <div class="col-sm-12">
+    <ul class="categories--list">
+      <li ng-repeat="category in categories | orderBy:'name' | filter:categoryFilter" class="category--item {{category.name}}">
+        <a ng-href="#/category/{{ category.$id }}">
+        <h3>{{ category.name }}</h3>
+        <p>{{category.description | characters: numChars: breakOnWord}}</p>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
