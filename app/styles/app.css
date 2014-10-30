@@ -124,57 +124,6 @@
 }
 
 
-@media (min-width: 1200px) {
-  .bookmarks {
-    width: 80%;
-    margin: 0 auto;
-  }
-}
-  .bookmark--list{
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  .bookmark--item {
-      box-sizing: border-box;
-      float: left;
-      width: 100%;
-      padding: 0;
-      border-bottom: 1px solid #eee;
-      background-color: #fff;
-      -moz-box-shadow: rgba(0,0,0,0.2) 0 1px 3px;
-        -webkit-box-shadow: rgba(0,0,0,0.2) 0 1px 3px;
-          box-shadow: rgba(0,0,0,0.2) 0 1px 3px;
-    }
-      .bookmark--item:first-child {
-        margin-top: 20px;
-        -moz-border-radius: 5px 5px 0 0;
-          -webkit-border-radius: 5px 5px 0 0;
-            border-radius: 5px 5px 0 0;
-      }
-      .bookmark--item:last-child {
-        border: none;
-        margin-bottom: 20px;
-        -moz-border-radius: 0 0 5px 5px;
-          -webkit-border-radius: 0 0 5px 5px;
-            border-radius: 0 0 5px 5px;
-      }
-      .bookmark--item a {
-        color: #333;
-      }
-        .bookmark--item a:hover {
-          background-color: #f9fafa;
-          text-decoration: none;
-        }
-      .bookmark--item h3 {
-        margin-top: 20px;
-        padding: 0 20px;
-      }
-      .bookmark--item p {
-        padding: 0 20px;
-      }
-
-
 .admin > .nav-pills {
   color: #fff;
 }
@@ -186,6 +135,22 @@
     }
   .nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus {
     background-color: #242422;
+  }
+
+.auth-forms {
+  padding: 20px;
+  margin-top: 30px;
+  background-color: #fff;
+  -moz-box-shadow: rgba(0,0,0,0.2) 0 1px 3px;
+    -webkit-box-shadow: rgba(0,0,0,0.2) 0 1px 3px;
+      box-shadow: rgba(0,0,0,0.2) 0 1px 3px;
+  -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+      border-radius: 5px;
+}
+  .auth-forms h2 {
+    color: #555;
+    margin-bottom: 30px;
   }
 
 footer,

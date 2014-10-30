@@ -1,6 +1,6 @@
 'use strict';
 
-app.controller('PathCtrl', function ($scope, $location, Auth) {
+app.controller('PathCtrl', ['$scope', '$location', 'Auth', function ($scope, $location, Auth) {
   $scope.signedIn = Auth.signedIn;
   $scope.logout = Auth.logout;
   $scope.user = Auth.user;
@@ -13,4 +13,4 @@ app.controller('PathCtrl', function ($scope, $location, Auth) {
       return false;
     }
   };
-});
+}]);

@@ -1,21 +1,29 @@
-<div>
-  <h2>{{ category.name }}</h2>
+<div class="row page--header">
+  <div class="col-md-6">
+    <h2>{{ category.name }}</h2>
+  </div>
+
+  <div class="col-md-6">
+    <input ng-model="bookmarkFilter" type="text" id="filter" class="form-control" placeholder="Filter the Categories">
+  </div>
 </div>
 
-<a ng-href="#/categories" class="btn btn-default"><span class="glyphicon glyphicon-chevron-left"></span> Back to Categories</a>
+<div class="row records">
+  <div class="col-md-12">
+    <a ng-href="#/categories" class="btn btn-link"><span class="glyphicon glyphicon-chevron-left"></span> Back to Categories</a>
 
-<input ng-model="bookmarkFilter" type="text" id="filter" class="form-control" placeholder="Filter the Categories">
-
-<table class="table table-striped">
-  <tbody>
-    <tr ng-repeat="bookmark in bookmarks | filter:bookmarkFilter">
-      <td width="8%">
-        <a ng-click="editCategory(category)"><span class="glyphicon glyphicon-pencil"></span></a>
-        <a ng-click="deleteCategory(category)"><span class="glyphicon glyphicon-remove danger"></span></a>
-      </td>
-      <td width="25%">{{ bookmark.name }}</td>
-      <td>{{ bookmark.url }}</td>
-      <td>{{ bookmark.description }}</td>
-    </tr>
-  </tbody>
-</table>
+    <table class="table table-striped">
+      <tbody>
+        <tr ng-repeat="bookmark in bookmarks | orderBy: 'name' | filter:bookmarkFilter">
+          <td width="8%">
+            <a ng-click="editCategory(category)"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a ng-click="deleteCategory(category)"><span class="glyphicon glyphicon-remove danger"></span></a>
+          </td>
+          <td width="25%">{{ bookmark.name }}</td>
+          <td><a href="{{ bookmark.url }}" title="{{ bookmark.name }}">{{ bookmark.url }}</a></td>
+          <td>{{ bookmark.description }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

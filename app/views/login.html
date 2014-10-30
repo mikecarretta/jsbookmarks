@@ -1,15 +1,18 @@
-<div class="auth-forms">
+<div class="row">
+  <div class="col-sm-6 col-sm-offset-3">
+    <div class="auth-forms">
+      <h2>Log In</h2>
 
-  <h2>Log In</h2>
+      <form ng-submit="login()">
+        <input type="email" ng-model="user.email" placeholder="Email" class="form-control"><br>
+        <input type="password" ng-model="user.password" placeholder="Password" class="form-control"><br>
+        <input type="submit" value="Log in" class="btn btn-primary" />
 
-  <form ng-submit="login()">
-    <input type="email" ng-model="user.email" placeholder="Email" class="form-control"><br>
-    <input type="password" ng-model="user.password" placeholder="Password" class="form-control"><br>
-    <input type="submit" value="Log in" class="btn btn-primary" />
+        <alert type="{{alert.type}}" show="alert.show">
+          <p><strong>{{alert.message}} {{er}}</strong>: {{mes}} Please try again.</p>
+        </alert>
 
-    <div class="alert alert-danger" ng-show="error">
-      <strong>{{ error.code }}</strong>: {{ error.message }} Please try again.
+      </form>
     </div>
-  </form>
-
+  </div>
 </div>

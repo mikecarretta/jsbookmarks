@@ -20,15 +20,6 @@ var app = angular
         templateUrl: 'views/category.html',
         controller: 'BookmarksCtrl'
       })
-      .when('/register', {
-        templateUrl: 'views/register.html',
-        controller: 'AuthCtrl',
-        resolve: {
-          user: function(Auth) {
-            return Auth.resolveUser();
-          }
-        }
-      })
       .when('/login', {
         templateUrl: 'views/login.html',
         controller: 'AuthCtrl',
@@ -46,19 +37,31 @@ var app = angular
         templateUrl: 'views/addbookmark.html',
         controller: 'AddBookmarkCtrl'
       })
+      // ADMIN - Add Category and Records, Edit/Delete links
       .when('/categories', {
         templateUrl: 'views/categories.html',
         controller: 'CategoriesCtrl'
+      })
+      // ADMIN - Categories Edit View
+      .when('/categoryEdit/:catId', {
+        templateUrl: 'views/categoryEdit.html',
+        controller: 'EditCategoryCtrl'
       })
       .when('/categories/:catId', {
         templateUrl: 'views/showbookmarks.html',
         controller: 'BookmarkViewCtrl'
       })
-      .when('/edit', {
-        templateUrl: 'views/edit.html',
+      .when('/edit/:id', {
+        templateUrl: 'views/addbookmark.html',
         controller: 'EditCtrl'
       })
       .otherwise({
         redirectTo: '/'
       });
   });
+/*
+  firebase init
+  -- repeat when changes --
+  grunt build
+  firebase deploy
+*/

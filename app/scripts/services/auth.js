@@ -1,6 +1,6 @@
 'use strict';
 
-app.factory('Auth', function ($firebase, $firebaseSimpleLogin, FIREBASE_URL, $rootScope) {
+app.factory('Auth', ['$firebase', '$firebaseSimpleLogin', 'FIREBASE_URL', '$rootScope', function ($firebase, $firebaseSimpleLogin, FIREBASE_URL, $rootScope) {
   var ref = new Firebase(FIREBASE_URL);
   var auth = $firebaseSimpleLogin(ref);
 
@@ -37,11 +37,11 @@ app.factory('Auth', function ($firebase, $firebaseSimpleLogin, FIREBASE_URL, $ro
     angular.copy(user, Auth.user);
     Auth.user.profile = $firebase(ref.child('profile').child(Auth.user.uid)).$asObject();
 
-    console.log(Auth.user);
+    // console.log(Auth.user);
   });
 
   $rootScope.$on('$firebaseSimpleLogin:logout', function() {
-    console.log('logged out');
+    //console.log('logged out');
 
     if(Auth.user && Auth.user.profile) {
       Auth.user.profile.$destroy();
@@ -50,4 +50,4 @@ app.factory('Auth', function ($firebase, $firebaseSimpleLogin, FIREBASE_URL, $ro
   });
 
   return Auth;
-});
+}]);
